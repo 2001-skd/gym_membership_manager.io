@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Membership Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Phoenix</h1>
+      <button class="add-member-btn">Add Member</button>
+    </header>
+
+    <section class="filters">
+      <input type="search" placeholder="Search member..." id="searchbox" />
+      <select id="filterbox">
+        <option value="">All Packages</option>
+        <option value="with cardio">With Cardio</option>
+        <option value="without cardio">Without Cardio</option>
+      </select>
+    </section>
+
+    <section class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Package</th>
+            <th>Fees</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <div class="pagination">
+      <!-- <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>Next</button> -->
+    </div>
+
+    <!-- modal section starts -->
+    <div class="modal hidden">
+      <div class="form-container">
+        <h2>Add New Member</h2>
+        <form id="member-form">
+          <div>
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter full name"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter phone number"
+              required
+            />
+          </div>
+          <div>
+            <label for="package">Package</label>
+            <select id="package" name="package" required>
+              <option value="All">Select Package</option>
+              <option value="With Cardio">With Cardio</option>
+              <option value="Without Cardio">Without Cardio</option>
+            </select>
+          </div>
+          <div>
+            <label for="fees">Fees</label>
+            <input
+              type="number"
+              id="fees"
+              name="fees"
+              placeholder="Enter fee amount"
+              required
+            />
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              placeholder="Enter address"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Add Member</button>
+        </form>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <!-- modal section ends -->
+
+    <footer>
+      &copy; <span>2025</span> Made by
+      <a
+        href="https://www.linkedin.com/in/santhakumar-reactdeveloper/"
+        target="_blank"
+        >Santhakumar</a
+      >
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
